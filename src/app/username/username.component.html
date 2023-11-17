@@ -1,0 +1,6 @@
+<p>username works!!</p>
+<input type="text" [(ngModel)]="username" (input)="updateUsernameEmpty()" />
+<p>{{ username }}</p>
+<button [disabled]="usernameEmpty" (click)="resetUsername()">
+  Reset Username
+</button>

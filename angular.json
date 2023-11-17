@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practicing-databinding": {
+    "basics-assignment-2-start": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/practicing-databinding",
+            "outputPath": "dist/basics-assignment-2-start",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,8 +35,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
+            "preserveSymlinks": true,
             "scripts": []
           },
           "configurations": {
@@ -67,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "practicing-databinding:build:production"
+              "buildTarget": "basics-assignment-2-start:build:production"
             },
             "development": {
-              "buildTarget": "practicing-databinding:build:development"
+              "buildTarget": "basics-assignment-2-start:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "practicing-databinding:build"
+            "buildTarget": "basics-assignment-2-start:build"
           }
         },
         "test": {
